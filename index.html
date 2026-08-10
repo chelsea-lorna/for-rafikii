@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0b0809">
+<title>For My Birthday Boy ❤️</title>
+<style>
+:root{--bg:#0b0809;--paper:#171012;--rose:#b86b78;--cream:#f3e7df;--muted:#c8b8ba;--gold:#d8b88f}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:#f8eeee;font-family:Georgia,"Times New Roman",serif}
+body.lock{overflow:hidden}
+button,a{font:inherit}
+.cover{position:fixed;inset:0;z-index:20;display:grid;place-items:center;text-align:center;padding:28px;
+background:radial-gradient(circle at 50% 20%,#57232f 0,transparent 35%),linear-gradient(145deg,#080607,#1c0e12)}
+.cover.hidden{opacity:0;pointer-events:none;transition:opacity .7s}
+.cover-card{max-width:650px}
+.eyebrow{text-transform:uppercase;letter-spacing:4px;font:10px Arial,sans-serif;color:var(--gold)}
+.cover h1{font-size:clamp(52px,13vw,96px);font-weight:400;line-height:.88;margin:20px 0}
+.cover h1 span{color:#d8aab0}
+.cover p{font:15px/1.7 Arial,sans-serif;color:#ddd0d2}
+.open{margin-top:25px;padding:14px 25px;border:1px solid #a96b76;background:#a96b76;color:white;border-radius:40px;cursor:pointer;letter-spacing:1px}
+.open:hover{background:#c17a86}
+main{opacity:0;transition:opacity 1s}main.show{opacity:1}
+section{padding:90px 22px}.inner{max-width:760px;margin:auto}
+.hero{min-height:100svh;display:grid;place-items:center;text-align:center;padding:35px 20px;
+background:radial-gradient(circle at 50% 18%,#4a1e29 0,transparent 35%),linear-gradient(145deg,#090707,#1c0f13)}
+h1{font-size:clamp(50px,12vw,92px);font-weight:400;line-height:.9;margin:18px 0}
+h1 span,h2 span{color:#d4a3aa}
+h2{font-size:38px;font-weight:400;line-height:1.1;margin:12px 0 25px}
+p{font:16px/1.9 Arial,sans-serif;color:#dfd3d5}
+.hero p{max-width:580px;margin:auto}.photo{width:min(340px,78vw);margin:32px auto;padding:8px;background:#eee7df;transform:rotate(-1.4deg);box-shadow:0 25px 70px #000}
+.photo img{width:100%;display:block}.scroll{margin-top:34px;font:10px Arial;letter-spacing:3px;color:#bcaeb0}
+.miles{text-align:center;background:linear-gradient(#10090b,#241319,#10090b)}
+.route{display:flex;align-items:center;gap:11px;max-width:600px;margin:36px auto;font:11px Arial;letter-spacing:2px}
+.line{height:1px;background:#754651;flex:1}.dot{width:9px;height:9px;border:1px solid #d8aab0;border-radius:50%}
+.box{padding:30px;border:1px solid #4a2b31;background:#ffffff08;border-radius:5px}
+.quote{border-left:2px solid var(--rose);padding:8px 0 8px 20px;margin:32px 0;color:#eadcdf;font-style:italic}
+.gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:15px;margin-top:35px}
+.gallery figure{margin:0;background:#151012;padding:8px;box-shadow:0 15px 35px #0008}
+.gallery img{width:100%;height:300px;object-fit:cover;display:block}
+.gallery figure:nth-child(1){transform:rotate(-1.5deg)}.gallery figure:nth-child(2){transform:rotate(1.5deg)}
+.gallery figure:nth-child(3){transform:rotate(1deg)}.gallery figure:nth-child(4){transform:rotate(-1deg)}
+figcaption{font:10px Arial;color:#aa9b9d;letter-spacing:1px;text-align:center;padding:9px 2px 3px}
+.video-wrap{margin-top:38px;padding:8px;background:#eee7df;box-shadow:0 20px 50px #0008}
+video{display:block;width:100%;max-height:78vh;background:#000}
+.list{padding:0;margin:25px 0}.list li{list-style:none;border-bottom:1px solid #ffffff12;padding:14px 0;font:15px/1.6 Arial;color:#e5d9db}
+.letter{background:#f0e6dd;color:#2b2021;padding:34px 27px;box-shadow:0 20px 55px #0008;transform:rotate(.3deg)}
+.letter p{color:#3e3032;font-family:Georgia,serif;font-size:16px;line-height:1.9}
+.final{min-height:85svh;display:grid;place-items:center;text-align:center;background:radial-gradient(circle at 50% 40%,#35151e,#0b0809 58%)}
+.big{font-size:clamp(36px,8vw,65px);line-height:1.06}.big span{color:#d8aab0}
+.signature{margin-top:35px;color:#d8b88f;font-size:20px;font-style:italic}
+.footer{padding:30px;text-align:center;font:10px Arial;color:#75676a;letter-spacing:1px}
+#hearts span{position:fixed;bottom:-30px;z-index:25;color:#c87984;opacity:.45;animation:up 8s linear forwards;pointer-events:none}
+@keyframes up{to{transform:translateY(-110vh) rotate(30deg);opacity:0}}
+@media(max-width:600px){.gallery{grid-template-columns:1fr 1fr}.gallery img{height:220px}section{padding:72px 18px}.box{padding:23px}.letter{padding:28px 21px}}
+</style>
+</head>
+<body class="lock">
+
+<div class="cover" id="cover">
+  <div class="cover-card">
+    <div class="eyebrow">A private little birthday surprise</div>
+    <h1>For my<br><span>birthday boy.</span></h1>
+    <p>Made with love, memories, prayers and a little piece of Kenya. 🇰🇪❤️</p>
+    <button class="open" onclick="openGift()">Open your gift ❤️</button>
+  </div>
+</div>
+
+<main id="main">
+<section class="hero">
+<div class="inner">
+<div class="eyebrow">Happy birthday, my love</div>
+<h1>Another year of<br><span>you.</span></h1>
+<p>And somehow, I get to be one of the people cheering you on through it.</p>
+<div class="photo"><img src="birthdayboy.jpg" alt="My birthday boy"></div>
+<p>I couldn't wrap a physical gift this year… so I wrapped some of my favourite memories, prayers and words into this instead.</p>
+<div class="scroll">KEEP GOING ↓</div>
+</div>
+</section>
+
+<section><div class="inner">
+<div class="eyebrow">Dear birthday boy</div>
+<h2>Today, I celebrate <span>you.</span></h2>
+<p>Happy happy birthday, my love. ❤️ Today I celebrate the man you are, the man you're becoming, and all the beautiful things still waiting for you.</p>
+<p>I wish I could be there beside you — laughing with you, annoying you, taking pictures, stealing a hug and making sure you actually feel celebrated. Since the miles decided otherwise, I made you this little place to remind you that you are loved from far away too.</p>
+<div class="quote">The distance may be between us, but it doesn't get to decide how much you mean to me.</div>
+<p>So today, wherever you are in the US, I hope you smile a little wider knowing that someone in Kenya is genuinely rooting for you.</p>
+</div></section>
+
+<section class="miles"><div class="inner">
+<div class="eyebrow">Miles apart • Same heart</div>
+<h2>🇰🇪 <span>Kenya</span> ——— 🇺🇸 <span>USA</span></h2>
+<div class="route"><b>ME</b><div class="line"></div><div class="dot"></div><div class="line"></div><b>YOU</b></div>
+<p>The distance is real. Missing you is real. But so are the memories, the laughter, the prayers and the love.</p>
+<div class="box">
+<h2 style="font-size:29px">My prayer for you 🙏🏾</h2>
+<p>May God go before you and guide every step you take. May He expand your territory, open doors that no person can shut, protect you wherever you go and give you wisdom for every decision ahead.</p>
+<p>May this new year bring you closer to everything you've been praying for. May you have peace in your heart, purpose in your work, favour in every room you enter and courage to become everything God created you to be.</p>
+<p>And when you cannot see the whole road ahead, may you trust that God is already there.</p>
+</div>
+</div></section>
+
+<section><div class="inner">
+<div class="eyebrow">A little archive of us</div>
+<h2>Some moments I would <span>keep forever.</span></h2>
+<p>These are the little pieces of time that remind me how quickly ordinary moments can become favourite memories.</p>
+<div class="gallery">
+<figure><img src="memory1.jpg" alt="A memory together"><figcaption>One of our little adventures ❤️</figcaption></figure>
+<figure><img src="memory2.jpg" alt="A memory together"><figcaption>Us being us.</figcaption></figure>
+<figure><img src="memory3.jpg" alt="A memory together"><figcaption>A day worth remembering.</figcaption></figure>
+<figure><img src="memory4.jpg" alt="A memory together"><figcaption>Another one for the memory box.</figcaption></figure>
+</div>
+</div></section>
+
+<section><div class="inner">
+<div class="eyebrow">Press play</div>
+<h2>Because pictures don't tell the <span>whole story.</span></h2>
+<p>A tiny moving piece of us, saved here for you.</p>
+<div class="video-wrap"><video controls playsinline preload="metadata"><source src="our_video.mp4" type="video/mp4">Your browser doesn't support this video.</video></div>
+</div></section>
+
+<section><div class="inner">
+<div class="eyebrow">12 little gifts, from me to you</div>
+<h2>If I could give you <span>12 things…</span></h2>
+<ul class="list">
+<li>01 — A hug, because I wish I could give you one today.</li>
+<li>02 — A kiss, because obviously. 😂❤️</li>
+<li>03 — My presence, because that's the part distance keeps stealing.</li>
+<li>04 — Peace for every season you're entering.</li>
+<li>05 — Courage for the dreams you're chasing.</li>
+<li>06 — Wisdom for every decision ahead.</li>
+<li>07 — God's favour over everything you put your hands to.</li>
+<li>08 — A thousand reasons to laugh on the days you need it.</li>
+<li>09 — The confidence to know how capable you are.</li>
+<li>10 — A reminder that you never have to figure everything out at once.</li>
+<li>11 — More beautiful memories for us to make.</li>
+<li>12 — And my heart… although, inconveniently, you already have that one. ❤️</li>
+</ul>
+</div></section>
+
+<section><div class="inner">
+<div class="eyebrow">One last thing</div>
+<div class="letter">
+<h2 style="font-size:32px">A letter for you.</h2>
+<p>My love,</p>
+<p>I thank God for you in my life. I thank Him for the conversations, the laughter, the memories, the little moments and even the things that have challenged us to grow.</p>
+<p>As you step into another year, I hope you never lose sight of who you are and who you are becoming. You have so much ahead of you, and I genuinely pray that this chapter surprises you in the best ways.</p>
+<p>I hope you accomplish the things you have been quietly praying about. I hope you walk into rooms you once only dreamed about entering. I hope you become proud of the man you see when you look back at this year.</p>
+<p>And even though you're celebrating far away from me, please remember this: <b>you are loved, you are prayed for, and you have someone in Kenya who is cheering for you.</b></p>
+<p>Happy birthday, babe. May this be one of the most beautiful chapters of your life.</p>
+<p style="text-align:right;font-style:italic">Love,<br>your girl ❤️</p>
+</div>
+</div></section>
+
+<section class="final"><div class="inner">
+<div class="eyebrow">And finally…</div>
+<div class="big">If I could give you one gift today,<br><span>I'd give you my presence.</span></div>
+<p>Until I can close the distance, let this little page remind you that you matter to me.</p>
+<div class="signature">Happy birthday, my love. ❤️<br>— the girl cheering for you from Kenya 🇰🇪</div>
+</div></section>
+<div class="footer">Made especially for you • 2026 ❤️</div>
+</main>
+
+<script>
+function openGift(){
+  document.getElementById('cover').classList.add('hidden');
+  document.body.classList.remove('lock');
+  document.getElementById('main').classList.add('show');
+  window.scrollTo(0,0);
+  for(let i=0;i<18;i++) setTimeout(heart,i*90);
+}
+function heart(){
+  const h=document.createElement('span');h.textContent='♥';
+  h.style.left=Math.random()*100+'vw';
+  h.style.fontSize=(12+Math.random()*18)+'px';
+  h.style.animationDuration=(6+Math.random()*5)+'s';
+  document.getElementById('hearts').appendChild(h);
+  setTimeout(()=>h.remove(),10000);
+}
+setInterval(heart,850);
+</script>
+</body>
+</html>
